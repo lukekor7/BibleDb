@@ -62,6 +62,13 @@
     <Folder Include="SourceManual\Table" />
     <Folder Include="SourceBibleHub" />
     <Folder Include="SourceBibleHub\Table" />
+    <Folder Include="SourceBibleHub\Procedure" />
+    <Folder Include="NormalStage" />
+    <Folder Include="Normal" />
+    <Folder Include="NormalStage\Table" />
+    <Folder Include="NormalStage\Procedure" />
+    <Folder Include="Normal\Table" />
+    <Folder Include="Normal\Procedure" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="SourceBibleHubStage\SourceBibleHubStage SCHEMA.sql" />
@@ -69,7 +76,15 @@
     <Build Include="SourceManual\SourceManual SCHEMA.sql" />
     <Build Include="SourceManual\Table\Book.sql" />
     <Build Include="SourceBibleHub\Table\ParallelMain.sql" />
-    <Build Include="SourceBibleHub\SourceBibleHub.sql" />
+    <Build Include="SourceBibleHub\SourceBibleHub SCHEMA.sql" />
+    <Build Include="SourceBibleHub\Procedure\LoadSourceBibleHub_pr.sql" />
+    <Build Include="NormalStage\NormalStage SCHEMA.sql" />
+    <Build Include="NormalStage\Table\ParallelMain.sql" />
+    <Build Include="NormalStage\Procedure\LoadNormalStage_pr.sql" />
+    <Build Include="Normal\Table\StrongReference.sql" />
+    <Build Include="Normal\Normal SCHEMA.sql" />
+    <Build Include="Normal\Procedure\LoadNormal_pr.sql" />
+    <Build Include="NormalStage\Table\ParallelMain2.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BibleDb.publish.xml" />
