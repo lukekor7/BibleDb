@@ -1,0 +1,2 @@
+﻿CREATE SCHEMA SourceManual
+GO
