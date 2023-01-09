@@ -56,20 +56,20 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="SourceParallelStage" />
-    <Folder Include="SourceParallelStage\Table" />
+    <Folder Include="SourceBibleHubStage" />
+    <Folder Include="SourceBibleHubStage\Table" />
     <Folder Include="SourceManual" />
     <Folder Include="SourceManual\Table" />
     <Folder Include="SourceBibleHub" />
     <Folder Include="SourceBibleHub\Table" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="SourceParallelStage\SourceParallelStage SCHEMA.sql" />
-    <Build Include="SourceParallelStage\Table\ParallelMain.sql" />
+    <Build Include="SourceBibleHubStage\SourceBibleHubStage SCHEMA.sql" />
+    <Build Include="SourceBibleHubStage\Table\ParallelMain.sql" />
     <Build Include="SourceManual\SourceManual SCHEMA.sql" />
     <Build Include="SourceManual\Table\Book.sql" />
     <Build Include="SourceBibleHub\Table\ParallelMain.sql" />
-    <Build Include="SourceBibleHub\SourceParallel.sql" />
+    <Build Include="SourceBibleHub\SourceBibleHub.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BibleDb.publish.xml" />

@@ -1,4 +1,4 @@
-﻿CREATE TABLE SourceParallelStage.ParallelMain
+﻿CREATE TABLE SourceBibleHubStage.ParallelMain
 (
 	BookShortName	NVARCHAR(100),
 	ChapterNumber   INT,
