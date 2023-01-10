@@ -50,28 +50,25 @@ FROM SourceBibleHubStage.ParallelMain x
 WHERE x.BookShortName NOT LIKE 'x%'
   AND y.BookShortName IS NULL
 UNION ALL
+-- Capable of inserting new content
+--   2 Pet 3:10 has HTML error
 SELECT 
-	x.BookShortName,
-	y.ChapterNumber,
-	y.VerseNumber,
-	y.WordNumber,
-	y.StrongNumber,
-	y.StrongSummary,
-	y.StrongLink,
-	y.OriginalText,
-	y.OriginalPseudo,
-	y.OriginalLink,
-	y.EnglishText,
-	y.MorphShortText,
-	y.MorphLongText
+	BookShortName = RIGHT(x.BookShortName, LEN(x.BookShortName) -1),
+	x.ChapterNumber,
+	x.VerseNumber,
+	x.WordNumber,
+	x.StrongNumber,
+	x.StrongSummary,
+	x.StrongLink,
+	x.OriginalText,
+	x.OriginalPseudo,
+	x.OriginalLink,
+	x.EnglishText,
+	x.MorphShortText,
+	x.MorphLongText
 FROM SourceBibleHubStage.ParallelMain x
-	JOIN SourceBibleHubStage.ParallelMain y
-		ON y.BookShortName = 'x' + x.BookShortName
-		AND y.ChapterNumber = x.ChapterNumber
-		AND y.VerseNumber = x.VerseNumber
-		AND y.WordNumber = x.WordNumber
-WHERE x.BookShortName NOT LIKE 'x%'
+WHERE x.BookShortName LIKE 'x%'
   -- Error in HTML on source
-  AND y.StrongNumber <> 'DELETE'
+  AND x.StrongNumber <> 'DELETE'
 END
 GO

@@ -69,6 +69,8 @@
     <Folder Include="NormalStage\Procedure" />
     <Folder Include="Normal\Table" />
     <Folder Include="Normal\Procedure" />
+    <Folder Include="iTabular" />
+    <Folder Include="iTabular\View" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="SourceBibleHubStage\SourceBibleHubStage SCHEMA.sql" />
@@ -85,6 +87,15 @@
     <Build Include="Normal\Normal SCHEMA.sql" />
     <Build Include="Normal\Procedure\LoadNormal_pr.sql" />
     <Build Include="NormalStage\Table\ParallelMain2.sql" />
+    <Build Include="Normal\Table\Morphology.sql" />
+    <Build Include="Normal\Table\WordElement.sql" />
+    <Build Include="Normal\Table\Book.sql" />
+    <Build Include="Normal\Table\ParallelMain.sql" />
+    <Build Include="iTabular\iTabular SCHEMA.sql" />
+    <Build Include="iTabular\View\Morphology_v.sql" />
+    <Build Include="iTabular\View\Verse_v.sql" />
+    <Build Include="iTabular\View\WordElement_v.sql" />
+    <Build Include="iTabular\View\ParallelMain_v.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BibleDb.publish.xml" />
